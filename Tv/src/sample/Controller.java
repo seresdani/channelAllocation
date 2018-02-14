@@ -36,6 +36,9 @@ public class Controller implements Initializable{
 
     private final ObservableList<Channel> data =
             FXCollections.observableArrayList(
+                    new Channel("S01", "455", "Hírek"),
+                    new Channel("S01", "455", "Hírek"),
+                    new Channel("S01", "455", "Hírek"),
                     new Channel("S01", "455", "Hírek")
             );
 
@@ -45,6 +48,7 @@ public class Controller implements Initializable{
         TableColumn channelCol = new TableColumn("Csatorna");
         channelCol.setMinWidth(10);
         channelCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        channelCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("channel"));
 
 
         TableColumn frekCol = new TableColumn("Frekvencia");
@@ -58,5 +62,6 @@ public class Controller implements Initializable{
         nameCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("name"));
 
         table.getColumns().addAll(channelCol, frekCol, nameCol);
+        table.setItems(data);
     }
 }
