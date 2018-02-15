@@ -1,14 +1,13 @@
 package sample;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
@@ -36,6 +35,11 @@ public class Controller implements Initializable{
     @FXML
     Pane importPane;
 
+    private final String MENU_CHANNEL = "Csatornák";
+    private final String MENU_EXIT = "Kilépés";
+    private final String MENU_LIST = "Lista";
+    private final String MENU_IMPORT = "Importálás";
+
     private final ObservableList<Channel> data =
             FXCollections.observableArrayList(
                     new Channel("S01", "455", "Hírek"),
@@ -44,8 +48,45 @@ public class Controller implements Initializable{
                     new Channel("S01", "455", "Hírek")
             );
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void setMenuData() {
+
+        TreeItem<String> treeItemRoot1 = new TreeItem<>("Menü");
+        TreeView<String> treeView = new TreeView<>(treeItemRoot1);
+        treeView.setShowRoot(false);
+
+        TreeItem<String> nodeItemA = new TreeItem<>(MENU_CHANNEL);
+        TreeItem<String> nodeItemB = new TreeItem<>(MENU_EXIT);
+
+        TreeItem<String> nodeItemA1 = new TreeItem<>(MENU_LIST);
+        TreeItem<String> nodeItemA2 = new TreeItem<>(MENU_IMPORT);
+
+        nodeItemA.getChildren().addAll(nodeItemA1, nodeItemA2);
+        treeItemRoot1.getChildren().addAll(nodeItemA, nodeItemB);
+        menuPane.getChildren().add(treeView);
+
+        treeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
+            @Override
+            public void changed(ObservableValue<? extends TreeItem<String>> observable, TreeItem<String> oldValue, TreeItem<String> newValue) {
+                TreeItem<String> selectedItem = (TreeItem<String>) newValue;
+                String selectedMenu = selectedItem.getValue();
+
+                if(null != selectedMenu) switch (selectedMenu) {
+                    case MENU_CHANNEL:
+                        if (selectedItem.isExpanded()) {
+                            selectedItem.setExpanded(false);
+                        } else selectedItem.setExpanded(true);
+                        break;
+
+                    case MENU_EXIT:
+                        System.exit(0);
+                        break;
+
+                }
+            })
+        };
+    }
+
+    public void setTableData () {
 
         TableColumn channelCol = new TableColumn("Csatorna");
         channelCol.setMinWidth(150);
@@ -103,5 +144,15 @@ public class Controller implements Initializable{
 
         table.getColumns().addAll(channelCol, frekCol, nameCol, checkCol);
         table.setItems(data);
+
+    }
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        setTableData();
+        setMenuData();
+
     }
 }
