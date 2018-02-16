@@ -4,6 +4,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,7 +14,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.FileChooser;
+
+import java.io.*;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
@@ -34,6 +39,12 @@ public class Controller implements Initializable{
     Pane channelPane;
     @FXML
     Pane importPane;
+    @FXML
+    TextField path;
+    @FXML
+    Button importButton;
+    @FXML
+    Button browserButton;
 
     private final String MENU_CHANNEL = "Csatornák";
     private final String MENU_EXIT = "Kilépés";
@@ -62,6 +73,8 @@ public class Controller implements Initializable{
 
         nodeItemA.getChildren().addAll(nodeItemA1, nodeItemA2);
         treeItemRoot1.getChildren().addAll(nodeItemA, nodeItemB);
+
+        nodeItemA.setExpanded(true);
         menuPane.getChildren().add(treeView);
 
         treeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
@@ -72,18 +85,34 @@ public class Controller implements Initializable{
 
                 if(null != selectedMenu) switch (selectedMenu) {
                     case MENU_CHANNEL:
-                        if (selectedItem.isExpanded()) {
+                        if (selectedItem.isExpanded())
+                            {
                             selectedItem.setExpanded(false);
-                        } else selectedItem.setExpanded(true);
-                        break;
+                            break;
+                            }
+                        else
+                            {
+                            selectedItem.setExpanded(true);
+                            break;
+                            }
 
                     case MENU_EXIT:
                         System.exit(0);
                         break;
 
+                    case MENU_LIST:
+                        importPane.setVisible(false);
+                        channelPane.setVisible(true);
+                        break;
+
+                    case MENU_IMPORT:
+                        channelPane.setVisible(false);
+                        importPane.setVisible(true);
+                        break;
+
                 }
-            })
-        };
+            }
+        });
     }
 
     public void setTableData () {
@@ -147,6 +176,50 @@ public class Controller implements Initializable{
 
     }
 
+    public void addNewChannel (ActionEvent event) {
+        if( !inputName.getText().equals("") && !inputFrek.getText().equals("") && !inputChannel.getText().equals("") ){
+            data.add(new Channel(inputChannel.getText(), inputFrek.getText(), inputName.getText()));
+            inputChannel.clear();
+            inputFrek.clear();
+            inputName.clear();
+        }
+    }
+
+    public void setImportPane (ActionEvent event) {
+
+        final FileChooser fileChooser = new FileChooser();
+
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Szöveges fájl (TXT)", "*.txt")
+        );
+
+        File file = fileChooser.showOpenDialog(importPane.getScene().getWindow());
+
+        path.setText(file.getAbsolutePath());
+
+    }
+
+    public void setFilePath (ActionEvent event) {
+
+        String line;
+
+        try {
+
+            BufferedReader bufferreader = new BufferedReader(new FileReader(path.getText()));
+            line = bufferreader.readLine();
+
+            while (line != null) {
+                data.addAll(new Channel(line.substring(0,"\\s+")))
+                line = bufferreader.readLine();
+            }
+
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
