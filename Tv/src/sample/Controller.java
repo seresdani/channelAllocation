@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -15,12 +17,14 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
+import org.controlsfx.control.textfield.TextFields;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 public class Controller implements Initializable{
 
@@ -46,19 +50,15 @@ public class Controller implements Initializable{
     Button importButton;
     @FXML
     Button browserButton;
+    @FXML
+    TextField txtField;
 
     private final String MENU_CHANNEL = "Csatornák";
     private final String MENU_EXIT = "Kilépés";
     private final String MENU_LIST = "Lista";
     private final String MENU_IMPORT = "Importálás";
 
-    private final ObservableList<Channel> data =
-            FXCollections.observableArrayList(
-                    new Channel("455", "Hírek"),
-                    new Channel("455", "Hírek"),
-                    new Channel("455", "Hírek"),
-                    new Channel("455", "Hírek")
-            );
+    private final ObservableList<Channel> data = FXCollections.observableArrayList();
 
     public void setMenuData() {
 
@@ -189,12 +189,28 @@ public class Controller implements Initializable{
 
             String line;
             while ((line = br.readLine()) != null) {
-                String[] lines = line.split("\\u2028");
+                if(Pattern.matches("^.* ...,.. .*$",line)){
 
-                for(int i=0; i<lines.length;i++){
+                    System.out.println(line);
 
-                    int sEnd = lines[i].indexOf(" ");
-                    data.add(new Channel(lines[i].substring(0, sEnd), lines[i].substring(sEnd + 1)));
+                    String[] lines = line.split("\\u2028");
+
+                    for(int i=0; i<lines.length;i++){
+
+                        int fEnd = lines[i].indexOf(" ", 5);
+                        int sEnd = lines[i].indexOf(" ", 12);
+
+                        int cEnd;
+                        if(lines[i].contains("magyar")){
+                            cEnd = lines[i].lastIndexOf("magyar");
+                        }
+                        else {
+                            cEnd = lines[i].lastIndexOf(" ") + 1;
+                        }
+
+                        data.add(new Channel(lines[i].substring(fEnd + 1, sEnd), lines[i].substring(sEnd + 1, cEnd - 1)));
+
+                    }
 
                 }
             }
@@ -203,13 +219,59 @@ public class Controller implements Initializable{
             System.out.println(e);
         }
 
+        importPane.setVisible(false);
+        channelPane.setVisible(true);
+
     }
+
+    private void initFilter() {
+
+        txtField.setPromptText("Filter");
+        txtField.textProperty().addListener(new InvalidationListener() {
+
+            @Override
+            public void invalidated(Observable o) {
+
+                if(txtField.textProperty().get().isEmpty()) {
+                    table.setItems(data);
+                    return;
+                }
+
+                ObservableList<Channel> tableItems = FXCollections.observableArrayList();
+                ObservableList<TableColumn<Channel, ?>> cols = table.getColumns();
+
+                for(int i=0; i<data.size(); i++) {
+
+                    for(int j=0; j<cols.size(); j++) {
+
+                        TableColumn col = cols.get(j);
+                        String cellValue = col.getCellData(data.get(i)).toString();
+                        cellValue = cellValue.toLowerCase();
+
+                        if(cellValue.contains(txtField.textProperty().get().toLowerCase())) {
+
+                            tableItems.add(data.get(i));
+                            break;
+
+                        }
+                    }
+                }
+
+                table.setItems(tableItems);
+
+            }
+
+        });
+
+    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         setTableData();
         setMenuData();
+        //initFilter();
 
     }
 }

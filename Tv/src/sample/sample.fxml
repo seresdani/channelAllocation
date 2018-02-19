@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -20,7 +21,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Pane id="channelPane" fx:id="channelPane" layoutX="38.0" layoutY="59.0" prefHeight="557.0" prefWidth="676.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Pane id="channelPane" fx:id="channelPane" layoutX="38.0" layoutY="59.0" prefHeight="557.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                       <children>
                           <TableView id="table" fx:id="table" editable="true" prefHeight="416.0" prefWidth="676.0">
                               <placeholder>
@@ -38,7 +39,7 @@
                           <Button id="addNewChannel" fx:id="addNewChannel" layoutX="537.0" layoutY="462.0" mnemonicParsing="false" onAction="#addNewChannel" prefHeight="54.0" prefWidth="72.0" text="Küldés" />
                       </children>
                   </Pane>
-                  <Pane id="importPane" fx:id="importPane" layoutX="38.0" layoutY="59.0" prefHeight="557.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Pane id="importPane" fx:id="importPane" layoutX="38.0" layoutY="59.0" prefHeight="557.0" prefWidth="676.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <TextField id="path" fx:id="path" disable="true" editable="false" layoutX="54.0" layoutY="260.0" prefHeight="25.0" prefWidth="352.0" promptText="Elérési útvonal..." />
                         <Button id="importButton" fx:id="importButton" layoutX="270.0" layoutY="363.0" mnemonicParsing="false" onAction="#setFilePath" text="Csatolt fájl importálása" />
@@ -53,5 +54,6 @@
             </AnchorPane>
         </items>
       </SplitPane>
+      <TextField id="txtField" fx:id="txtField" layoutX="608.0" layoutY="14.0" />
    </children>
 </AnchorPane>
