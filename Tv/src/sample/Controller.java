@@ -16,9 +16,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
@@ -53,10 +54,10 @@ public class Controller implements Initializable{
 
     private final ObservableList<Channel> data =
             FXCollections.observableArrayList(
-                    new Channel("S01", "455", "Hírek"),
-                    new Channel("S01", "455", "Hírek"),
-                    new Channel("S01", "455", "Hírek"),
-                    new Channel("S01", "455", "Hírek")
+                    new Channel("455", "Hírek"),
+                    new Channel("455", "Hírek"),
+                    new Channel("455", "Hírek"),
+                    new Channel("455", "Hírek")
             );
 
     public void setMenuData() {
@@ -117,23 +118,6 @@ public class Controller implements Initializable{
 
     public void setTableData () {
 
-        TableColumn channelCol = new TableColumn("Csatorna");
-        channelCol.setMinWidth(150);
-        channelCol.setStyle("-fx-alignment: CENTER;");
-        channelCol.setCellFactory(TextFieldTableCell.forTableColumn());
-        channelCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("channel"));
-
-        channelCol.setOnEditCommit(
-                new EventHandler<TableColumn.CellEditEvent<Channel, String>>() {
-                    @Override
-                    public void handle(TableColumn.CellEditEvent<Channel, String> event) {
-                        ((Channel) event.getTableView().getItems().get(
-                                event.getTablePosition().getRow())).setChannel(event.getNewValue());
-                    }
-                }
-        );
-
-
         TableColumn frekCol = new TableColumn("Frekvencia");
         frekCol.setMinWidth(200);
         frekCol.setStyle("-fx-alignment: CENTER;");
@@ -169,16 +153,16 @@ public class Controller implements Initializable{
         TableColumn checkCol = new TableColumn("Beállítva");
         checkCol.setMinWidth(74);
         checkCol.setStyle("-fx-alignment: Center;");
-        checkCol.setCellFactory(CheckBoxTableCell.forTableColumn(channelCol));
+        checkCol.setCellFactory(CheckBoxTableCell.forTableColumn(checkCol));
 
-        table.getColumns().addAll(channelCol, frekCol, nameCol, checkCol);
+        table.getColumns().addAll(frekCol, nameCol, checkCol);
         table.setItems(data);
 
     }
 
     public void addNewChannel (ActionEvent event) {
         if( !inputName.getText().equals("") && !inputFrek.getText().equals("") && !inputChannel.getText().equals("") ){
-            data.add(new Channel(inputChannel.getText(), inputFrek.getText(), inputName.getText()));
+            data.add(new Channel(inputFrek.getText(), inputName.getText()));
             inputChannel.clear();
             inputFrek.clear();
             inputName.clear();
@@ -201,22 +185,22 @@ public class Controller implements Initializable{
 
     public void setFilePath (ActionEvent event) {
 
-        String line;
+        try (BufferedReader br = new BufferedReader(new FileReader(path.getText()))) {
 
-        try {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] lines = line.split("\\u2028");
 
-            BufferedReader bufferreader = new BufferedReader(new FileReader(path.getText()));
-            line = bufferreader.readLine();
+                for(int i=0; i<lines.length;i++){
 
-            while (line != null) {
-                data.addAll(new Channel(line.substring(0,"\\s+")))
-                line = bufferreader.readLine();
+                    int sEnd = lines[i].indexOf(" ");
+                    data.add(new Channel(lines[i].substring(0, sEnd), lines[i].substring(sEnd + 1)));
+
+                }
             }
-
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        }
+        catch (Exception e) {
+            System.out.println(e);
         }
 
     }
