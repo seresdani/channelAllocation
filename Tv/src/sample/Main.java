@@ -17,8 +17,8 @@ public class Main extends Application {
         Scene scene = new Scene(root);
 
         primaryStage.setTitle("Csatorna kiosztás");
-        primaryStage.setWidth(825 );
-        primaryStage.setHeight(650);
+        primaryStage.setMinWidth(825);
+        primaryStage.setMinHeight(650);
         primaryStage.setScene(scene);
         primaryStage.getIcons().add(new Image("tv.png"));
         primaryStage.show();

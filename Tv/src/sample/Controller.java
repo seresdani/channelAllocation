@@ -1,11 +1,11 @@
 package sample;
 
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -14,10 +14,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
-import org.controlsfx.control.textfield.TextFields;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -52,6 +52,9 @@ public class Controller implements Initializable{
     Button browserButton;
     @FXML
     TextField txtField;
+    @FXML
+    AnchorPane mainPane;
+
 
     private final String MENU_CHANNEL = "Csatornák";
     private final String MENU_EXIT = "Kilépés";
@@ -191,8 +194,6 @@ public class Controller implements Initializable{
             while ((line = br.readLine()) != null) {
                 if(Pattern.matches("^.* ...,.. .*$",line)){
 
-                    System.out.println(line);
-
                     String[] lines = line.split("\\u2028");
 
                     for(int i=0; i<lines.length;i++){
@@ -226,42 +227,40 @@ public class Controller implements Initializable{
 
     private void initFilter() {
 
-        txtField.setPromptText("Filter");
-        txtField.textProperty().addListener(new InvalidationListener() {
+        txtField.setPromptText("Keresés...");
 
-            @Override
-            public void invalidated(Observable o) {
+        FilteredList<Channel> filteredData = new FilteredList<>(data, p -> true);
 
-                if(txtField.textProperty().get().isEmpty()) {
-                    table.setItems(data);
-                    return;
+        // 2. Set the filter Predicate whenever the filter changes.
+        txtField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(channel -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
                 }
 
-                ObservableList<Channel> tableItems = FXCollections.observableArrayList();
-                ObservableList<TableColumn<Channel, ?>> cols = table.getColumns();
+                // Compare first name and last name field in your object with filter.
+                String lowerCaseFilter = newValue.toLowerCase();
 
-                for(int i=0; i<data.size(); i++) {
+                if (String.valueOf(channel.getFrek()).toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                    // Filter matches first name.
 
-                    for(int j=0; j<cols.size(); j++) {
-
-                        TableColumn col = cols.get(j);
-                        String cellValue = col.getCellData(data.get(i)).toString();
-                        cellValue = cellValue.toLowerCase();
-
-                        if(cellValue.contains(txtField.textProperty().get().toLowerCase())) {
-
-                            tableItems.add(data.get(i));
-                            break;
-
-                        }
-                    }
+                } else if (String.valueOf(channel.getName()).toLowerCase().contains(lowerCaseFilter)) {
+                    return true; // Filter matches last name.
                 }
 
-                table.setItems(tableItems);
-
-            }
-
+                return false; // Does not match.
+            });
         });
+
+        // 3. Wrap the FilteredList in a SortedList.
+        SortedList<Channel> sortedData = new SortedList<>(filteredData);
+
+        // 4. Bind the SortedList comparator to the TableView comparator.
+        sortedData.comparatorProperty().bind(table.comparatorProperty());
+        // 5. Add sorted (and filtered) data to the table.
+        table.setItems(sortedData);
 
     }
 
@@ -269,9 +268,12 @@ public class Controller implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        mainPane.setLayoutX(5);
+        mainPane.setLayoutY(5);
+
         setTableData();
         setMenuData();
-        //initFilter();
+        initFilter();
 
     }
 }
