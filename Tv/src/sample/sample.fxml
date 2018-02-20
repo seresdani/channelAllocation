@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane id="mainPane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label layoutX="327.0" layoutY="8.0" text="Csatorna kiosztás">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
       <SplitPane dividerPositions="0.14912280701754385" layoutY="42.0" prefHeight="559.0" prefWidth="800.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
@@ -22,20 +18,18 @@
                <children>
                   <Pane id="channelPane" fx:id="channelPane" layoutX="38.0" layoutY="59.0" prefHeight="557.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                       <children>
-                          <TableView id="table" fx:id="table" editable="true" prefHeight="416.0" prefWidth="676.0">
+                          <TableView id="table" fx:id="table" editable="true" prefHeight="452.0" prefWidth="676.0">
                               <placeholder>
                                   <Label text="Nincs adat!" />
                               </placeholder>
                               <columns>
                               </columns>
                           </TableView>
-                          <TextField id="inputChannel" fx:id="inputChannel" layoutX="311.0" layoutY="433.0" promptText="S01" />
-                          <TextField id="inputName" fx:id="inputName" layoutX="311.0" layoutY="519.0" promptText="Hírek TV" />
-                          <TextField id="inputFrek" fx:id="inputFrek" layoutX="311.0" layoutY="476.0" promptText="471,25" />
-                          <Label alignment="CENTER_RIGHT" layoutX="180.0" layoutY="523.0" prefHeight="17.0" prefWidth="116.0" text="Neve:" textAlignment="RIGHT" />
-                          <Label alignment="CENTER_RIGHT" layoutX="180.0" layoutY="437.0" prefHeight="17.0" prefWidth="116.0" text="Csatorna:" />
-                          <Label alignment="CENTER_RIGHT" layoutX="180.0" layoutY="480.0" prefHeight="17.0" prefWidth="116.0" text="Frekvrencia:" />
-                          <Button id="addNewChannel" fx:id="addNewChannel" layoutX="537.0" layoutY="462.0" mnemonicParsing="false" onAction="#addNewChannel" prefHeight="54.0" prefWidth="72.0" text="Küldés" />
+                          <TextField id="inputName" fx:id="inputName" layoutX="189.0" layoutY="507.0" promptText="Hírek TV" />
+                          <TextField id="inputFrek" fx:id="inputFrek" layoutX="189.0" layoutY="468.0" promptText="471,25" />
+                          <Label alignment="CENTER_RIGHT" layoutX="48.0" layoutY="511.0" prefHeight="17.0" prefWidth="116.0" text="Neve:" textAlignment="RIGHT" />
+                          <Label alignment="CENTER_RIGHT" layoutX="48.0" layoutY="472.0" prefHeight="17.0" prefWidth="116.0" text="Frekvrencia:" />
+                          <Button id="addNewChannel" fx:id="addNewChannel" layoutX="431.0" layoutY="472.0" mnemonicParsing="false" onAction="#addNewChannel" prefHeight="54.0" prefWidth="72.0" text="Küldés" />
                       </children>
                   </Pane>
                   <Pane id="importPane" fx:id="importPane" layoutX="38.0" layoutY="59.0" prefHeight="557.0" prefWidth="676.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">

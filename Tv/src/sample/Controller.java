@@ -31,8 +31,6 @@ public class Controller implements Initializable{
     @FXML
     TableView table;
     @FXML
-    TextField inputChannel;
-    @FXML
     TextField inputFrek;
     @FXML
     TextField inputName;
@@ -122,7 +120,7 @@ public class Controller implements Initializable{
     public void setTableData () {
 
         TableColumn frekCol = new TableColumn("Frekvencia");
-        frekCol.setMinWidth(200);
+        frekCol.setMinWidth(150);
         frekCol.setStyle("-fx-alignment: CENTER;");
         frekCol.setCellFactory(TextFieldTableCell.forTableColumn());
         frekCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("frek"));
@@ -138,7 +136,7 @@ public class Controller implements Initializable{
         );
 
         TableColumn nameCol = new TableColumn("Csatorna neve");
-        nameCol.setMinWidth(250);
+        nameCol.setMinWidth(400);
         nameCol.setStyle("-fx-alignment: CENTER;");
         nameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         nameCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("name"));
@@ -154,7 +152,7 @@ public class Controller implements Initializable{
         );
 
         TableColumn checkCol = new TableColumn("Beállítva");
-        checkCol.setMinWidth(74);
+        checkCol.setMinWidth(110);
         checkCol.setStyle("-fx-alignment: Center;");
         checkCol.setCellFactory(CheckBoxTableCell.forTableColumn(checkCol));
 
@@ -164,9 +162,8 @@ public class Controller implements Initializable{
     }
 
     public void addNewChannel (ActionEvent event) {
-        if( !inputName.getText().equals("") && !inputFrek.getText().equals("") && !inputChannel.getText().equals("") ){
+        if( !inputName.getText().equals("") && !inputFrek.getText().equals("") ){
             data.add(new Channel(inputFrek.getText(), inputName.getText()));
-            inputChannel.clear();
             inputFrek.clear();
             inputName.clear();
         }
