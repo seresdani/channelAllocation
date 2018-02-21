@@ -1,0 +1,352 @@
+﻿2-14 
+sz. 
+melléklet 
+(Nyírbátor) 
+Termékek, 
+szolgáltatáscsomagok, 
+ezek elérhetőségeinek 
+jellemzői 
+
+
+Bruttó 
+előfizetési 
+díjak 
+Hűségidő 
+nélkül 
+1 
+év 
+hűségidővel 
+1 
+szolgáltatás 
+igénybevételével 
+2 
+szolgáltatás 
+igénybevételével 
+KTV Csomagok 
+KTV 
+A 
+szociális 
+1 640 Ft 1 577 Ft 1 513 Ft 
+KTV B alap 4 360 Ft 4 161 Ft 3 961 Ft 
+KTV C Emelt 4 942 Ft 4 713 Ft 4 485 Ft 
+Net 
+egyéni 
+csomagok 
+Max 
+sebesség 
+Kbit/s 
+Garantált 
+sebesség 
+Kbit/s 
+Net 
+egyéni 
+alap 
+10240/2048 512/128 3 835 Ft 3 453 Ft 3 453 Ft 
+Net 
+egyéni 
+emelt 
+15360/3072 1024/192 5 828 Ft 5 241 Ft 5 241 Ft 
+Net 
+egyéni 
+extra 
+20480/4096 1500/400 7 341 Ft 6 603 Ft 6 603 Ft 
+Net 
+egyéni 
+prémium 
+25600/5120 2048/400 13 125 Ft 11 817 Ft 11 817 Ft 
+Net 
+üzleti 
+csomagok 
+Net 
+üzleti 
+alap 
+10240/2048 512/128 4 387 Ft 3 942 Ft 3 942 Ft 
+Net 
+üzleti 
+emelt 
+15360/3072 1024/192 7 661 Ft 6 896 Ft 6 896 Ft 
+Net 
+üzleti 
+extra 
+20480/4096 1500/400 12 075 Ft 10 865 Ft 10 865 Ft 
+Net 
+üzleti 
+prémium 
+25600/5120 2048/400 15 750 Ft 14 175 Ft 14 175 Ft 
+
+
+2-14 
+sz. 
+melléklet (Nyírbátor) 
+
+
+
+Csatornakiosztás 
+
+
+Sorsz. 
+
+Csatorna 
+
+Frekv.MHz 
+
+Műsor 
+
+
+Nyelv 
+
+1. S07 147,25 Képújság 
+magyar 
+
+2. S08 154,25 Városi 
+TV 
+magyar 
+3. S09 161,25 KölcseyTV 
+magyar 
+4. S10 168,25 M1 magyar mhz
+5. C05 175,25 M2 magyar 
+6. C06 182,25 m4 Sport magyar 
+7. C07 189,25 Duna TV magyar 
+8. C08 196,25 TV2 magyar 
+9. C09 203,25 RTL Klub magyar 
+10. C11 217,25 VIASAT3 magyar 
+11. C12 224,25 PRIME magyar 
+12. S13 245,25 STORY4 magyar 
+13. S14 252,25 RTL II magyar 
+14. S15 259,25 Sport1 magyar 
+15. S16 266,25 Hír 
+TV 
+magyar 
+16. S17 273,25 ATV magyar 
+17. S18 280,25 Film+ magyar 
+18. S19 287,25 M3 magyar 
+19. S20 294,25 Super TV2 magyar 
+20. S21 303,25 OzoneTV magyar 
+21. S22 311,25 STORY5 magyar 
+22. S23 319,25 Duna World magyar 
+23. S24 327,25 RTL Spike magyar 
+24. S25 335,25 LifeTV magyar 
+25. S28 359,25 Spektrum Home magyar 
+26. C21 471,25 RTL+ magyar 
+27. C22 479,25 Mozi+ magyar 
+28. C24 495,25 VIASAT6 magyar 
+29. C25 503,25 Sláger 
+TV 
+magyar 
+30. C26 511,25 Comedy Central Family magyar 
+31. C27 519,25 Muzsika TV magyar 
+32. C29 535,25 Echo TV magyar 
+33. C30 543,25 Film Cafe magyar 
+34. C42 639,25 TLC magyar 
+35. C43 647,25 Eurosport magyar 
+36. C44 655,25 MTV magyar 
+37. C46 671,25 Cool magyar 
+38. C47 679,25 DoQ magyar 
+39. C48 687,25 Disney Channel magyar 
+40. C50 703,25 AXN magyar 
+41. C51 711,25 Spektrum magyar 
+42. C52 719,25 TV Paprika magyar 
+43. C53 727,25 Nickelodeon magyar 
+44. C54 735,25 National Geographic magyar 
+45. C55 743,25 Discovery Channel magyar 
+46. C56 751,25 Minimax magyar 
+47. C57 759,25 Sport 2 magyar 
+48. C58 767,25 Paramount Channel magyar 
+49. C59 775,25 AMC magyar 
+50. C60 783,25 Comedy Central magyar 
+CSATORNA 
+
+TOVÁBBÍTÁSÁRA 
+VÁLLALT 
+HATÁRIDŐ 
+
+
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+2018.02.28 
+
+Csomagok 
+
+Tartalom 
+
+Érvényes 2018.01.11-től 
+
+
+Helyi TV 
+Helyi TV 
+Helyi TV 
+
+Közszolgálati 
+csatorna 
+Közszolgálati 
+csatorna 
+
+
+Sport 
+
+Közszolgálati 
+csatorna 
+Szórakoztató, 
+kereskedelmi 
+Szórakoztató, 
+kereskedelmi 
+Szórakoztató, 
+kereskedelmi 
+
+
+Filmek, sorozatok 
+
+Szórakoztató, 
+kereskedelmi 
+Szórakoztató, 
+kereskedelmi 
+
+
+Sport 
+
+Hírek 
+Hírek 
+
+
+Filmek, sorozatok 
+
+Közszolgálati 
+csatorna 
+Szórakoztató, 
+kereskedelmi 
+Életmód 
+Szórakoztató, 
+kereskedelmi 
+Közszolgálati 
+csatorna 
+Szórakoztató, 
+kereskedelmi 
+Életmód 
+Ismeretterjesztő 
+csatorna 
+Szórakoztató, 
+kereskedelmi 
+
+
+Filmek, sorozatok 
+
+Szórakoztató, 
+kereskedelmi 
+
+
+Zene 
+
+Szórakoztató, 
+kereskedelmi 
+
+
+Zene 
+
+Hírek 
+
+
+Filmek, sorozatok 
+
+Ismeretterjesztő 
+csatorna 
+
+
+Sport 
+Zene 
+Filmek, sorozatok 
+
+Ismeretterjesztő 
+csatorna 
+
+
+Gyerekeknek 
+Filmek, sorozatok 
+
+Ismeretterjesztő 
+csatorna 
+Életmód 
+
+
+Gyerekeknek 
+
+Ismeretterjesztő 
+csatorna 
+Ismeretterjesztő 
+csatorna 
+
+
+Gyerekeknek 
+Sport 
+Filmek, sorozatok 
+Filmek, sorozatok 
+
+Szórakoztató, 
+kereskedelmi 
+
+
+KTV 
+szociális 
+
+
+KTV B Alap 
+
+KTV C Emelt 
+
+1. 91,6 Kossuth magyar 2018.02.28 Rádió 
+csatornák 
+2. 92,4 Bartók 
+magyar 2018.02.28 Bármelyik TV 
+csomag 
+mellett 
+3. 102,5 Petőfi 
+magyar 2018.02.28 elérhetőek 
+
+
+
