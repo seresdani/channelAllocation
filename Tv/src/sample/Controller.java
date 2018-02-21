@@ -23,7 +23,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 public class Controller implements Initializable{
@@ -53,6 +55,7 @@ public class Controller implements Initializable{
     @FXML
     AnchorPane mainPane;
 
+    DB db = new DB();
 
     private final String MENU_CHANNEL = "Csatornák";
     private final String MENU_EXIT = "Kilépés";
@@ -99,8 +102,14 @@ public class Controller implements Initializable{
                             }
 
                     case MENU_EXIT:
-                        System.exit(0);
-                        break;
+                        try {
+                            TimeUnit.SECONDS.sleep(2);
+                            System.exit(0);
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Valami baj van a kilépéssel");
+                            System.out.println(""+e);
+                        }
 
                     case MENU_LIST:
                         importPane.setVisible(false);
@@ -119,6 +128,12 @@ public class Controller implements Initializable{
 
     public void setTableData () {
 
+        TableColumn idCol = new TableColumn("Sorszám");
+        idCol.setMinWidth(50);
+        idCol.setStyle("-fx-alignment: CENTER");
+        idCol.setCellFactory(TextFieldTableCell.forTableColumn());
+        idCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("id"));
+
         TableColumn frekCol = new TableColumn("Frekvencia");
         frekCol.setMinWidth(150);
         frekCol.setStyle("-fx-alignment: CENTER;");
@@ -136,7 +151,7 @@ public class Controller implements Initializable{
         );
 
         TableColumn nameCol = new TableColumn("Csatorna neve");
-        nameCol.setMinWidth(400);
+        nameCol.setMinWidth(350);
         nameCol.setStyle("-fx-alignment: CENTER;");
         nameCol.setCellFactory(TextFieldTableCell.forTableColumn());
         nameCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("name"));
@@ -156,14 +171,20 @@ public class Controller implements Initializable{
         checkCol.setStyle("-fx-alignment: Center;");
         checkCol.setCellFactory(CheckBoxTableCell.forTableColumn(checkCol));
 
-        table.getColumns().addAll(frekCol, nameCol, checkCol);
+        table.getColumns().addAll(idCol, frekCol, nameCol, checkCol);
+
+        data.addAll(db.getAllChannels());
+
         table.setItems(data);
 
     }
 
-    public void addNewChannel (ActionEvent event) {
+    public void addNewChannel (ActionEvent event) throws SQLException {
         if( !inputName.getText().equals("") && !inputFrek.getText().equals("") ){
-            data.add(new Channel(inputFrek.getText(), inputName.getText()));
+            Channel newChannel = new Channel(inputFrek.getText(), inputName.getText());
+            db.addChannel(newChannel);
+            newChannel.setId(db.getId(newChannel));
+            data.add(newChannel);
             inputFrek.clear();
             inputName.clear();
         }
@@ -205,8 +226,10 @@ public class Controller implements Initializable{
                         else {
                             cEnd = lines[i].lastIndexOf(" ") + 1;
                         }
-
-                        data.add(new Channel(lines[i].substring(fEnd + 1, sEnd), lines[i].substring(sEnd + 1, cEnd - 1)));
+                        Channel newChannel = new Channel(lines[i].substring(fEnd + 1, sEnd).replace(',', '.'), lines[i].substring(sEnd + 1, cEnd - 1));
+                        db.addChannel(newChannel);
+                        newChannel.setId(db.getId(newChannel));
+                        data.add(newChannel);
 
                     }
 

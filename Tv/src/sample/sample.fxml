@@ -26,7 +26,7 @@
                               </columns>
                           </TableView>
                           <TextField id="inputName" fx:id="inputName" layoutX="189.0" layoutY="507.0" promptText="Hírek TV" />
-                          <TextField id="inputFrek" fx:id="inputFrek" layoutX="189.0" layoutY="468.0" promptText="471,25" />
+                          <TextField id="inputFrek" fx:id="inputFrek" layoutX="189.0" layoutY="468.0" promptText="471.25" />
                           <Label alignment="CENTER_RIGHT" layoutX="48.0" layoutY="511.0" prefHeight="17.0" prefWidth="116.0" text="Neve:" textAlignment="RIGHT" />
                           <Label alignment="CENTER_RIGHT" layoutX="48.0" layoutY="472.0" prefHeight="17.0" prefWidth="116.0" text="Frekvrencia:" />
                           <Button id="addNewChannel" fx:id="addNewChannel" layoutX="431.0" layoutY="472.0" mnemonicParsing="false" onAction="#addNewChannel" prefHeight="54.0" prefWidth="72.0" text="Küldés" />
