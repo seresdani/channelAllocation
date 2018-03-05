@@ -1,32 +1,32 @@
 package sample;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.CheckBoxTableCell;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.FileChooser;
+        import javafx.beans.value.ChangeListener;
+        import javafx.beans.value.ObservableValue;
+        import javafx.collections.FXCollections;
+        import javafx.collections.ObservableList;
+        import javafx.collections.transformation.FilteredList;
+        import javafx.collections.transformation.SortedList;
+        import javafx.event.ActionEvent;
+        import javafx.event.EventHandler;
+        import javafx.fxml.FXML;
+        import javafx.fxml.Initializable;
+        import javafx.scene.control.*;
+        import javafx.scene.control.cell.CheckBoxTableCell;
+        import javafx.scene.control.cell.PropertyValueFactory;
+        import javafx.scene.control.cell.TextFieldTableCell;
+        import javafx.scene.layout.AnchorPane;
+        import javafx.scene.layout.Pane;
+        import javafx.scene.layout.StackPane;
+        import javafx.stage.FileChooser;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.net.URL;
-import java.sql.SQLException;
-import java.util.ResourceBundle;
-import java.util.concurrent.TimeUnit;
-import java.util.regex.Pattern;
+        import java.io.BufferedReader;
+        import java.io.File;
+        import java.io.FileReader;
+        import java.net.URL;
+        import java.sql.SQLException;
+        import java.util.ResourceBundle;
+        import java.util.concurrent.TimeUnit;
+        import java.util.regex.Pattern;
 
 public class Controller implements Initializable{
 
@@ -54,6 +54,8 @@ public class Controller implements Initializable{
     TextField txtField;
     @FXML
     AnchorPane mainPane;
+    @FXML
+    Button setProfil;
 
     DB db = new DB();
 
@@ -91,15 +93,15 @@ public class Controller implements Initializable{
                 if(null != selectedMenu) switch (selectedMenu) {
                     case MENU_CHANNEL:
                         if (selectedItem.isExpanded())
-                            {
+                        {
                             selectedItem.setExpanded(false);
                             break;
-                            }
+                        }
                         else
-                            {
+                        {
                             selectedItem.setExpanded(true);
                             break;
-                            }
+                        }
 
                     case MENU_EXIT:
                         try {
@@ -135,7 +137,7 @@ public class Controller implements Initializable{
         idCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("id"));
 
         TableColumn frekCol = new TableColumn("Frekvencia");
-        frekCol.setMinWidth(150);
+        frekCol.setMinWidth(136);
         frekCol.setStyle("-fx-alignment: CENTER;");
         frekCol.setCellFactory(TextFieldTableCell.forTableColumn());
         frekCol.setCellValueFactory(new PropertyValueFactory<Channel, String>("frek"));
@@ -284,6 +286,9 @@ public class Controller implements Initializable{
 
     }
 
+    public void profilPopUp (ActionEvent event) {
+        System.out.println("Ne nyomogasd!");
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

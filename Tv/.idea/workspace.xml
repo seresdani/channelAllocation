@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="csatorna" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b841b656-9acf-45d7-9894-be9cc0bba13e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -11,7 +16,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file leaf-file-name="Channel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Channel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="130" column="32" lean-forward="false" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
+              <folding>
+                <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
+                <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
+                <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
+                <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
+                <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
+                <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+                <element signature="e#10392#10393#0" expanded="true" />
+                <element signature="e#10443#10444#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -25,31 +59,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Channel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Channel.java">
+      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="-94">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
-              <folding>
-                <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-                <element signature="method#changed#0;class#2514:4161" expanded="false" />
-                <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
-                <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
-                <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
-                <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
-                <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
-              </folding>
-            </state>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -67,19 +86,6 @@
                 <element signature="method#getId#0;class#DB#0" expanded="false" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="28" column="118" lean-forward="false" selection-start-line="28" selection-start-column="118" selection-end-line="28" selection-end-column="118" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -104,14 +110,14 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/WildcardRegex.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Channel.java" />
         <option value="$PROJECT_DIR$/src/sample/DB.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-34" />
     <option name="y" value="-19" />
     <option name="width" value="1382" />
@@ -158,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -175,40 +180,29 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Tv" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Tv" type="1039202d:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Tv" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Tv" type="1039202d:NonAndroidModuleNode" />
+              <item name="java" type="b5c1fe26:NonAndroidSourceTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Tv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tv" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tv" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tv" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tv" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tv" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
               <item name="Tv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -230,33 +224,20 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Tv" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Tv" type="1039202d:NonAndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Tv" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Tv" type="1039202d:NonAndroidModuleNode" />
-              <item name="java" type="b5c1fe26:NonAndroidSourceTypeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Errors" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JAVA" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist/lib/derbynet.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="tv" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -431,7 +412,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -442,12 +423,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16650988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28453946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18385416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -503,7 +484,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -576,12 +557,13 @@
           <caret line="154" column="32" lean-forward="false" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
           <folding>
             <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-            <element signature="method#changed#0;class#2514:4161" expanded="false" />
             <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
             <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
             <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
             <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
             <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="e#10443#10444#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -614,12 +596,13 @@
           <caret line="271" column="29" lean-forward="false" selection-start-line="271" selection-start-column="29" selection-end-line="271" selection-end-column="29" />
           <folding>
             <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-            <element signature="method#changed#0;class#2514:4161" expanded="false" />
             <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
             <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
             <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
             <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
             <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="e#10443#10444#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -671,12 +654,13 @@
           <caret line="275" column="5" lean-forward="true" selection-start-line="275" selection-start-column="5" selection-end-line="275" selection-end-column="5" />
           <folding>
             <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-            <element signature="method#changed#0;class#2514:4161" expanded="false" />
             <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
             <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
             <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
             <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
             <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="e#10443#10444#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -698,12 +682,13 @@
           <caret line="185" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
             <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-            <element signature="method#changed#0;class#2514:4161" expanded="false" />
             <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
             <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
             <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
             <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
             <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="e#10443#10444#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -736,12 +721,13 @@
           <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-            <element signature="method#changed#0;class#2514:4161" expanded="false" />
             <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
             <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
             <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
             <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
             <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="e#10443#10444#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,12 +787,13 @@
           <caret line="84" column="13" lean-forward="false" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
           <folding>
             <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-            <element signature="method#changed#0;class#2514:4161" expanded="false" />
             <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
             <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
             <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
             <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
             <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="e#10443#10444#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,12 +823,13 @@
           <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-            <element signature="method#changed#0;class#2514:4161" expanded="false" />
             <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
             <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
             <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
             <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
             <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="e#10443#10444#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -910,17 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="21" />
-          <folding>
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/ResultSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -928,11 +905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Channel.java">
+    <entry file="file://$PROJECT_DIR$/derby.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -951,33 +927,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/derby.log">
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="136">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="21" />
           <folding>
-            <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
-            <element signature="method#changed#0;class#2514:4161" expanded="false" />
-            <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
-            <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
-            <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
-            <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
-            <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="28" column="118" lean-forward="false" selection-start-line="28" selection-start-column="118" selection-end-line="28" selection-end-column="118" />
+        <state relative-caret-position="-94">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -985,16 +949,48 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Channel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="130" column="32" lean-forward="false" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
+          <folding>
+            <element signature="method#setMenuData#0;class#Controller#0" expanded="false" />
+            <element signature="method#setTableData#0;class#Controller#0" expanded="false" />
+            <element signature="method#addNewChannel#0;class#Controller#0" expanded="false" />
+            <element signature="method#setImportPane#0;class#Controller#0" expanded="false" />
+            <element signature="method#setFilePath#0;class#Controller#0" expanded="false" />
+            <element signature="method#initFilter#0;class#Controller#0" expanded="false" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="e#10443#10444#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>csatorna</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1063,6 +1059,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>derby</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

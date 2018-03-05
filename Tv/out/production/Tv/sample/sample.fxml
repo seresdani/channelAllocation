@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.scene.text.Font?>
 <AnchorPane id="mainPane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <SplitPane dividerPositions="0.14912280701754385" layoutY="42.0" prefHeight="559.0" prefWidth="800.0">
@@ -48,5 +46,6 @@
         </items>
       </SplitPane>
       <TextField id="txtField" fx:id="txtField" layoutX="608.0" layoutY="14.0" prefHeight="25.0" prefWidth="193.0" />
+      <Button id="setProfil" fx:id="setProfil" layoutX="14.0" layoutY="14.0" onAction="#profilPopUp" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Profilválasztó" />
    </children>
 </AnchorPane>
