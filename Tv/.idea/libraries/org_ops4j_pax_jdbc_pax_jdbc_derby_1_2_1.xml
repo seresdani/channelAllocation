@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="org.ops4j.pax.jdbc:pax-jdbc-derby:1.2.1" type="repository">
+    <properties maven-id="org.ops4j.pax.jdbc:pax-jdbc-derby:1.2.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/ops4j/pax/jdbc/pax-jdbc-derby/1.2.1/pax-jdbc-derby-1.2.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
